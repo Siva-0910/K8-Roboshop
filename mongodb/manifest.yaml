@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: roboshop
   name: mongodb-deployment
   labels:
     tier: database
@@ -14,12 +15,13 @@ spec:
       project: roboshop
       env: dev 
   template:
-    metadata: mongodb
-    labels:
-      tier: database
-      project: roboshop
-      env: dev  
-    spec:
-      containers:
-      - name: mongodb
-        iamge: sivpri/mongodb:v1        
+    metadata:
+      name: mongodb
+      labels:
+        tier: database
+        project: roboshop
+        env: dev  
+      spec:
+        containers:
+        - name: mongodb
+          iamge: sivpri/mongodb:v1        
