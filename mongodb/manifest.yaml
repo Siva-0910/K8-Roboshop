@@ -32,6 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo-service
+  namespace: roboshop
   labels:
     name: mongo-service
 spec:
