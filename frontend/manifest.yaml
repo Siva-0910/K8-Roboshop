@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: roboshop
+  labels:
+    purpose: frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      category: frontend
+      project: roboshop
+      env: dev
+  template:
+    metadata:
+      name: frontend
+      labels:
+        category: frontend
+        project: roboshop
+        env: dev  
+    spec:
+    containers:
+    - name: frontend
+      image: sivpri/frontend:v1
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: roboshop
+  labels:
+    category: frontend
+    project: roboshop
+    env: dev
+spec:
+  selector:
+    category: frontend
+    project: roboshop
+    env: dev
+  ports:
+  - protocol: TCP 
+    port: 80
+    targetPort: 80
+
