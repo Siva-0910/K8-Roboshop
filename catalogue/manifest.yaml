@@ -34,7 +34,7 @@ metadata:
   namespace: roboshop
   name: catalogue
   labels:
-    name: catalogue
+    name: catalogue-svc
 spec:
   selector:    
     projectname: roboshop
