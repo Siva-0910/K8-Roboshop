@@ -21,7 +21,7 @@ spec:
         tier: database
         project: roboshop
         env: dev  
-      spec:
-        containers:
-        - name: mongodb
-          iamge: sivpri/mongodb:v1        
+    spec:
+    containers:
+    - name: mongodb
+      iamge: sivpri/mongodb:v1        
