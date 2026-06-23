@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: debug
+  labels:
+spec:
+  containers:
+  - name: debug
+    image: sivpri/debug:v1    
