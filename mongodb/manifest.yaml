@@ -25,6 +25,12 @@ spec:
       containers:
       - name: mongodb
         image: sivpri/mongodb:v1
+        command:
+        - mongod
+        - "--bind_ip"
+        - "0.0.0.0"
+        - "--port"
+        - "27017"
 
 ---
 
