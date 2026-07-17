@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+  labels:
+    project: roboshop-mongodb
+    environment: dev
+    tier: database
+spec:
+  replicas: 1
+  matchLabels:
+     project: roboshop-mongodb
+     environment: dev
+     tier: database   
