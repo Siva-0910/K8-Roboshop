@@ -31,20 +31,20 @@ spec:
       environment: dev
       category: catalogue
       tier: apps 
-template:
-  metadata:
-    labels:
-      project: roboshop
-      environment: dev
-      category: catalogue
-      tier: apps
-  spec:
-    containers:
-    - name: catalogue
-      image: sivpri/catalogue:v1
-      envFrom:
-      - ConfigMapRef:
-          name: catalogue
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        environment: dev
+        category: catalogue
+        tier: apps
+    spec:
+      containers:
+      - name: catalogue
+        image: sivpri/catalogue:v1
+        envFrom:
+        - ConfigMapRef:
+            name: catalogue
 
 
 ---
