@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
+  namespace: roboshop
   labels:
     project: roboshop-mongodb
     environment: dev
@@ -11,4 +12,7 @@ spec:
   matchLabels:
      project: roboshop-mongodb
      environment: dev
-     tier: database   
+     tier: database
+  containers:
+  - name: mongodb
+    image: sivpri/mongodb    
